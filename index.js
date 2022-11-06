@@ -1,5 +1,5 @@
  const express = require('express');
- const cros = require('cros');
+ const cros = require('cors');
  const {connection} = require("./config/mongodb");
  const {userRoutes} = require("./routes/user.routes");
  const {todoRouter} = require('./routes/todo.routes');
@@ -16,7 +16,7 @@
     
     
     app.use(express.json())
-    app.use(cors());
+    app.use(cros());
     app.use("/user", userRoutes)
     app.use(authentication);
     app.use("/todos", todoRouter)
