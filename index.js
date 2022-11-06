@@ -1,5 +1,5 @@
  const express = require('express');
- const cors = require('cros');
+//  const cors = require('cros');
  const {connection} = require("./config/mongodb");
  const {userRoutes} = require("./routes/user.routes");
  const {todoRouter} = require('./routes/todo.routes');
