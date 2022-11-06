@@ -7,18 +7,18 @@
 
  require("dotenv").config();
  const app = express();
-
+ 
  const port = process.env.port || 8080
-
  app.post("/", (req,res) => {
-    res.send("Welcome to our page, please login first")
- })
-
- app.use(cors());
- app.use(express.json())
- app.use("/user", userRoutes)
- app.use(authentication);
- app.use("/todos", todoRouter)
+     res.send("Welcome to our page, please login first")
+    })
+    
+    
+    app.use(express.json())
+    app.use(cors());
+    app.use("/user", userRoutes)
+    app.use(authentication);
+    app.use("/todos", todoRouter)
 
  app.listen(port , async(req,res) => {
     try{
