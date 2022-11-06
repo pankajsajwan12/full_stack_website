@@ -1,5 +1,5 @@
  const express = require('express');
- var cors = require('cors')
+ const cors = require('cros');
  const {connection} = require("./config/mongodb");
  const {userRoutes} = require("./routes/user.routes");
  const {todoRouter} = require('./routes/todo.routes');
@@ -13,7 +13,8 @@
  app.post("/", (req,res) => {
     res.send("Welcome to our page, please login first")
  })
- app.use(cors())
+
+ app.use(cors());
  app.use(express.json())
  app.use("/user", userRoutes)
  app.use(authentication);
